@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddiqui Engineering Works — Crane & Mechanical Services, Mumbai</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:   #0d1117;
+  --steel:   #141c26;
+  --panel:   #111820;
+  --card:    #17202c;
+  --border:  #1e2735;
+  --border2: #28334a;
+  --accent:  #f0a500;
+  --accent2: #c44b1e;
+  --white:   #eef1f6;
+  --muted:   #7a8899;
+  --text:    #b8c4d4;
+  --green:   #25d366;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--text);font-family:'Barlow',sans-serif;overflow-x:hidden}
+
+/* NOISE TEXTURE */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+
+/* ─── TOPBAR ─── */
+.topbar{background:var(--accent);padding:9px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar span{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--black)}
+.topbar a{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--black);text-decoration:none}
+.topbar a:hover{text-decoration:underline}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:28px;height:28px}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2px;list-style:none}
+.nav-links a{display:block;padding:8px 14px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;transition:all .2s}
+.nav-links a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.nav-cta{background:var(--accent);color:var(--black)!important;padding:10px 20px!important;font-weight:700!important;border-bottom:none!important;border-radius:0}
+.nav-cta:hover{background:var(--white)!important;color:var(--black)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:.3s}
+.mobile-menu{display:none;position:absolute;top:68px;left:0;right:0;background:var(--steel);border-bottom:1px solid var(--border);padding:16px 32px;z-index:99}
+.mobile-menu a{display:block;padding:12px 0;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border)}
+.mobile-menu.open{display:block}
+
+/* ─── HERO ─── */
+.hero{min-height:94vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--steel)}
+.hero-bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 90% at 75% 50%, rgba(240,165,0,.06) 0%, transparent 65%),
+  radial-gradient(ellipse 50% 60% at 5% 85%, rgba(196,75,30,.05) 0%, transparent 60%),
+  linear-gradient(160deg, #131d2a 0%, #0d1117 100%);
+}
+
+/* Mechanical grid */
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(30,39,53,0.6) 1px, transparent 1px),linear-gradient(90deg, rgba(30,39,53,0.6) 1px, transparent 1px);
+  background-size:64px 64px;
+}
+
+/* Animated dot at intersections */
+.hero-grid::after{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle, rgba(240,165,0,0.15) 1px, transparent 1px);
+  background-size:64px 64px;
+  background-position:0 0;
+  animation:grid-pulse 4s ease-in-out infinite;
+}
+@keyframes grid-pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+.hero-inner{position:relative;max-width:1200px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 520px;gap:64px;align-items:center}
+
+.hero-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--accent);border-left:3px solid var(--accent);padding-left:12px;margin-bottom:20px;display:inline-block}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,7vw,96px);letter-spacing:3px;color:var(--white);line-height:0.95;margin-bottom:20px}
+.hero h1 span{color:var(--accent)}
+.hero-tagline{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.2vw,28px);letter-spacing:3px;color:var(--accent);margin-bottom:18px;opacity:0.9}
+.hero p{font-size:16px;color:var(--text);line-height:1.8;max-width:500px;margin-bottom:40px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all .25s;cursor:pointer;border:none}
+.btn-gold{background:var(--accent);color:var(--black)}
+.btn-gold:hover{background:var(--white);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--white);border:1px solid var(--border2)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ─── CRANE SVG PANEL ─── */
+.crane-panel{background:var(--card);border:1px solid var(--border);padding:32px;position:relative;overflow:hidden}
+.crane-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.crane-panel-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.crane-panel-label::before{content:'';display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 1.5s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* CRANE SVG ANIMATION */
+#crane-svg{width:100%;height:auto;display:block}
+
+/* Tower crane parts */
+.crane-mast{animation:sway 6s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(0deg)}50%{transform:rotate(0.3deg)}}
+.crane-jib{transform-origin:30% 22%;animation:jib-move 8s ease-in-out infinite}
+@keyframes jib-move{0%,100%{transform:rotate(0deg)}40%{transform:rotate(1.5deg)}70%{transform:rotate(-0.8deg)}}
+.crane-hook{animation:hook-swing 4s ease-in-out infinite}
+@keyframes hook-swing{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.crane-rope{animation:rope-length 8s ease-in-out infinite}
+@keyframes rope-length{0%,100%{transform:scaleY(1)}40%{transform:scaleY(1.15)}70%{transform:scaleY(0.9)}}
+.crane-trolley{animation:trolley-move 8s ease-in-out infinite}
+@keyframes trolley-move{0%,100%{transform:translateX(0)}40%{transform:translateX(22px)}70%{transform:translateX(-10px)}}
+.gear-a{animation:spin-cw 3s linear infinite;transform-origin:50% 50%}
+.gear-b{animation:spin-ccw 3s linear infinite;transform-origin:50% 50%}
+@keyframes spin-cw{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes spin-ccw{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+.cable-line{stroke-dasharray:4 4;animation:cable-dash 1s linear infinite}
+@keyframes cable-dash{to{stroke-dashoffset:-8}}
+
+/* Stats below crane */
+.crane-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);margin-top:2px}
+.cs{background:var(--card);padding:20px;text-align:center}
+.cs-num{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--accent);line-height:1}
+.cs-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+/* ─── SECTION COMMONS ─── */
+section{padding:96px 32px}
+.container{max-width:1200px;margin:0 auto}
+.sec-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4vw,56px);letter-spacing:2px;color:var(--white);margin-bottom:16px;line-height:1}
+.sec-sub{font-size:15px;color:var(--muted);max-width:520px;line-height:1.75;margin-bottom:56px}
+.divider-line{width:48px;height:3px;background:var(--accent);margin-bottom:44px}
+
+/* ─── TICKER STRIP ─── */
+.ticker-wrap{overflow:hidden;background:var(--accent);padding:10px 0;border-top:1px solid rgba(0,0,0,0.15)}
+.ticker{display:flex;gap:0;white-space:nowrap;animation:ticker 22s linear infinite}
+.ticker-item{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--black);padding:0 40px}
+.ticker-item::after{content:'//';margin-left:40px;opacity:.4}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── SERVICES ─── */
+#services{background:var(--black)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+.svc{background:var(--card);padding:36px 32px;position:relative;overflow:hidden;transition:background .25s}
+.svc:hover{background:#1a2535}
+.svc-bar{position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);transform:scaleY(0);transition:transform .35s;transform-origin:bottom}
+.svc:hover .svc-bar{transform:scaleY(1)}
+.svc-num{font-family:'Bebas Neue',sans-serif;font-size:72px;color:rgba(240,165,0,.07);line-height:1;margin-bottom:6px;transition:color .25s}
+.svc:hover .svc-num{color:rgba(240,165,0,.14)}
+.svc-icon-wrap{width:44px;height:44px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:border-color .25s}
+.svc:hover .svc-icon-wrap{border-color:var(--accent)}
+.svc-title{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);margin-bottom:12px}
+.svc-desc{font-size:13px;color:var(--muted);line-height:1.75}
+
+/* ─── PROCESS ─── */
+#process{background:var(--steel)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process-steps::after{content:'';position:absolute;top:36px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);z-index:0}
+.pstep{text-align:center;padding:0 24px;position:relative;z-index:1}
+.pstep-num{width:72px;height:72px;border:1px solid var(--border2);background:var(--card);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--accent);position:relative;transition:all .3s}
+.pstep:hover .pstep-num{background:var(--accent);color:var(--black);border-color:var(--accent)}
+.pstep-num svg{width:28px;height:28px}
+.pstep-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);margin-bottom:10px}
+.pstep-desc{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* ─── ABOUT ─── */
+#about{background:var(--black)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.about-body p{font-size:15px;color:var(--text);line-height:1.85;margin-bottom:18px}
+.about-body strong{color:var(--white)}
+.about-card{background:var(--card);border:1px solid var(--border);padding:40px;position:relative;overflow:hidden}
+.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.founder-tag{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.founder-name{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:2px;color:var(--white);margin-bottom:6px}
+.founder-role{font-size:13px;color:var(--accent);font-weight:600;letter-spacing:.5px;margin-bottom:24px}
+.founder-bio{font-size:14px;color:var(--text);line-height:1.8;margin-bottom:20px}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;background:rgba(240,165,0,0.08);border:1px solid rgba(240,165,0,0.22);color:var(--accent);padding:7px 14px;transition:all .2s}
+.tag:hover{background:rgba(240,165,0,0.18)}
+
+/* ─── SKILLS ─── */
+#skills{background:var(--steel)}
+.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.skills-pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{padding:10px 20px;background:var(--card);border:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text);transition:all .2s;cursor:default;display:flex;align-items:center;gap:8px}
+.pill:hover{border-color:var(--accent);color:var(--accent);background:rgba(240,165,0,.05)}
+.pill-dot{width:4px;height:4px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.exp-block{margin-bottom:28px}
+.exp-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between}
+.exp-pct{color:var(--accent)}
+.exp-bar-wrap{background:var(--border);height:4px;overflow:hidden}
+.exp-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1.4s cubic-bezier(.25,.46,.45,.94)}
+.exp-name{font-size:14px;color:var(--white);font-weight:500;margin-top:6px}
+
+/* ─── MECHANICAL VISUAL SECTION ─── */
+#mechanical{background:var(--black);padding:0}
+.mech-full{width:100%;height:320px;background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.mech-svg{width:100%;height:100%}
+.mech-label{position:absolute;bottom:20px;left:32px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
+/* Gear animations */
+.g1{animation:spin-cw 6s linear infinite;transform-origin:center}
+.g2{animation:spin-ccw 4s linear infinite;transform-origin:center}
+.g3{animation:spin-cw 5s linear infinite;transform-origin:center}
+.piston-rod{animation:piston 2s ease-in-out infinite}
+@keyframes piston{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.gauge-needle{animation:gauge 4s ease-in-out infinite;transform-origin:50% 95%}
+@keyframes gauge{0%,100%{transform:rotate(-40deg)}50%{transform:rotate(35deg)}}
+
+/* ─── CLIENTS ─── */
+#clients{background:var(--steel)}
+.clients-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-bottom:48px}
+.client-tile{background:var(--card);padding:28px 24px;display:flex;align-items:center;gap:16px;transition:background .2s}
+.client-tile:hover{background:#1a2535}
+.client-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.client-name{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:.5px;color:var(--white);margin-bottom:3px}
+.client-sub{font-size:12px;color:var(--muted);letter-spacing:.5px}
+.trust-strip{display:flex;gap:0;background:var(--border)}
+.trust-item{flex:1;background:var(--card);padding:28px;text-align:center}
+.trust-num{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--accent);line-height:1}
+.trust-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* ─── CONTACT ─── */
+#contact{background:var(--black)}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.cinfo-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.cinfo-item:last-of-type{border-bottom:none;margin-bottom:32px}
+.cinfo-icon-box{width:44px;height:44px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.cinfo-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.cinfo-value{font-size:16px;color:var(--white);font-weight:500;line-height:1.4}
+.cinfo-value a{color:var(--white);text-decoration:none}
+.cinfo-value a:hover{color:var(--accent)}
+.wa-btn{display:flex;align-items:center;gap:12px;background:var(--green);color:#fff;text-decoration:none;padding:16px 28px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all .2s;width:fit-content}
+.wa-btn:hover{background:#1ebe5d;transform:translateY(-2px)}
+.contact-form{background:var(--card);border:1px solid var(--border);padding:44px;position:relative;overflow:hidden}
+.contact-form::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.form-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--white);margin-bottom:6px}
+.form-sub{font-size:13px;color:var(--muted);margin-bottom:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--steel);border:1px solid var(--border);color:var(--white);padding:13px 16px;font-family:'Barlow',sans-serif;font-size:14px;outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group select{cursor:pointer;color:var(--text)}
+.form-group select option{background:var(--steel)}
+.form-submit{width:100%;padding:16px;background:var(--accent);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;transition:all .25s}
+.form-submit:hover{background:var(--white);transform:translateY(-2px)}
+.form-msg{display:none;margin-top:16px;padding:14px 18px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px}
+.form-msg.success{background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.3);color:var(--green)}
+
+/* ─── FOOTER ─── */
+footer{background:var(--panel);border-top:1px solid var(--border)}
+.footer-main{max-width:1200px;margin:0 auto;padding:60px 32px 44px;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
+.f-brand{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:3px;color:var(--white);margin-bottom:12px}
+.f-brand span{color:var(--accent)}
+.f-about{font-size:13px;color:var(--muted);line-height:1.75;max-width:240px}
+.f-col-title{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.f-links{list-style:none}
+.f-links li{margin-bottom:10px}
+.f-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:var(--white)}
+.f-links li:not(:has(a)){font-size:13px;color:var(--muted)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 32px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:11px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+
+/* ─── WHATSAPP FLOAT ─── */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.wa-float-btn{width:60px;height:60px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,.35);transition:all .3s;animation:pulse-wa 2.5s infinite}
+.wa-float-btn:hover{transform:scale(1.1)}
+@keyframes pulse-wa{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,.35)}50%{box-shadow:0 4px 44px rgba(37,211,102,.6)}}
+.wa-tooltip{background:var(--green);color:#fff;padding:8px 14px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;white-space:nowrap;border-radius:2px;opacity:0;transform:translateX(10px);transition:.2s;pointer-events:none}
+.wa-float:hover .wa-tooltip{opacity:1;transform:translateX(0)}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ─── GALLERY ─── */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:3px}
+.gallery-item{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s}
+.gallery-item:hover{border-color:var(--accent)}
+.gallery-item.wide{grid-column:span 2}
+.gallery-item.tall{grid-row:span 2}
+.gallery-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:100%;height:100%}
+.ph-icon{font-size:32px;opacity:.4}
+.ph-text{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.ph-hint{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--border2);border:1px dashed var(--border2);padding:4px 12px;margin-top:4px;transition:all .2s}
+.gallery-item:hover .ph-hint{color:var(--accent);border-color:var(--accent)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr}
+  .crane-panel{display:none}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr 1fr;gap:32px}
+  .process-steps::after{display:none}
+  .about-grid,.skills-layout,.contact-wrap{grid-template-columns:1fr}
+  .clients-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .gallery-item.wide{grid-column:span 2}
+  .footer-main{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  section{padding:64px 20px}
+  .topbar{justify-content:center;text-align:center}
+  .nav-inner{padding:0 20px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .services-grid,.clients-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1fr;gap:32px}
+  .trust-strip{flex-direction:column;gap:0}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>⚙ Crane &amp; Mechanical Engineering Specialists — Mumbai, Maharashtra</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 28 28" fill="none">
+        <rect x="3" y="18" width="4" height="8" fill="#f0a500"/>
+        <rect x="3" y="4" width="3" height="15" fill="#b8c4d4"/>
+        <rect x="6" y="5" width="17" height="2.5" fill="#b8c4d4"/>
+        <rect x="21" y="7.5" width="2" height="6" fill="#b8c4d4"/>
+        <line x1="12" y1="7.5" x2="12" y2="16" stroke="#f0a500" stroke-width="1.5"/>
+        <polygon points="10,16 14,16 12,19" fill="#f0a500"/>
+      </svg>
+      Siddiqui <span>Engineering</span> Works
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#process" onclick="toggleMenu()">Process</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+    <a href="#clients" onclick="toggleMenu()">Clients</a>
+    <a href="#contact" onclick="toggleMenu()">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <!-- Text -->
+    <div>
+      <div class="hero-label">Mumbai's Crane Engineering Specialists</div>
+      <h1><span>Siddiqui</span><br>Engineering<br>Works</h1>
+      <p class="hero-tagline">Built on Precision. Proven in the Field.</p>
+      <p>From hydraulic crane overhauls to precision-machined replacement parts — workshop and field expertise for every crane type, every scale.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn btn-gold">Explore Services</a>
+        <a href="#about" class="btn btn-outline">About Us</a>
+      </div>
+    </div>
+
+    <!-- Animated Crane Panel -->
+    <div class="crane-panel">
+      <div class="crane-panel-label">Live System · Crane Simulation</div>
+
+      <!-- TOWER CRANE SVG -->
+      <svg id="crane-svg" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#f0a500"/>
+            <stop offset="100%" style="stop-color:#c44b1e"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Background grid lines -->
+        <line x1="0" y1="60" x2="420" y2="60" stroke="#1e2735" stroke-width="1"/>
+        <line x1="0" y1="120" x2="420" y2="120" stroke="#1e2735" stroke-width="1"/>
+        <line x1="0" y1="180" x2="420" y2="180" stroke="#1e2735" stroke-width="1"/>
+        <line x1="0" y1="240" x2="420" y2="240" stroke="#1e2735" stroke-width="1"/>
+        <line x1="80" y1="0" x2="80" y2="280" stroke="#1e2735" stroke-width="1"/>
+        <line x1="160" y1="0" x2="160" y2="280" stroke="#1e2735" stroke-width="1"/>
+        <line x1="240" y1="0" x2="240" y2="280" stroke="#1e2735" stroke-width="1"/>
+        <line x1="320" y1="0" x2="320" y2="280" stroke="#1e2735" stroke-width="1"/>
+        <line x1="400" y1="0" x2="400" y2="280" stroke="#1e2735" stroke-width="1"/>
+
+        <!-- GROUND -->
+        <rect x="0" y="260" width="420" height="20" fill="#0d1117"/>
+        <line x1="0" y1="260" x2="420" y2="260" stroke="#f0a500" stroke-width="1" opacity="0.4"/>
+
+        <!-- CRANE BASE / MAST GROUP -->
+        <g class="crane-mast">
+          <!-- Mast base -->
+          <rect x="88" y="220" width="34" height="40" fill="#141c26" stroke="#1e2735" stroke-width="1"/>
+          <!-- Mast column -->
+          <rect x="96" y="50" width="18" height="170" fill="#17202c" stroke="#28334a" stroke-width="1"/>
+          <!-- Mast lattice detail -->
+          <line x1="96" y1="80" x2="114" y2="100" stroke="#1e2735" stroke-width="1"/>
+          <line x1="114" y1="80" x2="96" y2="100" stroke="#1e2735" stroke-width="1"/>
+          <line x1="96" y1="120" x2="114" y2="140" stroke="#1e2735" stroke-width="1"/>
+          <line x1="114" y1="120" x2="96" y2="140" stroke="#1e2735" stroke-width="1"/>
+          <line x1="96" y1="160" x2="114" y2="180" stroke="#1e2735" stroke-width="1"/>
+          <line x1="114" y1="160" x2="96" y2="180" stroke="#1e2735" stroke-width="1"/>
+          <!-- Mast top cap -->
+          <rect x="92" y="44" width="26" height="8" fill="#f0a500" opacity="0.8"/>
+        </g>
+
+        <!-- JIB (horizontal arm) + TROLLEY -->
+        <g class="crane-jib">
+          <!-- Main jib -->
+          <rect x="100" y="44" width="260" height="10" fill="#17202c" stroke="#28334a" stroke-width="1"/>
+          <!-- Jib underside accent -->
+          <rect x="100" y="50" width="260" height="2" fill="url(#goldGrad)" opacity="0.5"/>
+          <!-- Jib support cables to mast -->
+          <line x1="105" y1="44" x2="105" y2="16" stroke="#b8c4d4" stroke-width="1" opacity="0.5"/>
+          <line x1="280" y1="44" x2="105" y2="16" stroke="#b8c4d4" stroke-width="1.5" opacity="0.6"/>
+          <line x1="200" y1="44" x2="105" y2="16" stroke="#b8c4d4" stroke-width="1" opacity="0.4"/>
+          <!-- Counter jib (back) -->
+          <rect x="60" y="44" width="40" height="8" fill="#141c26" stroke="#1e2735" stroke-width="1"/>
+          <rect x="60" y="44" width="8" height="36" fill="#141c26" stroke="#1e2735" stroke-width="1"/>
+          <!-- Counter weight -->
+          <rect x="54" y="78" width="18" height="14" fill="#28334a" stroke="#1e2735" stroke-width="1"/>
+
+          <!-- TROLLEY (moves along jib) -->
+          <g class="crane-trolley">
+            <rect x="180" y="50" width="28" height="10" fill="#f0a500" opacity="0.9" rx="1"/>
+            <circle cx="184" cy="49" r="3" fill="#141c26" stroke="#f0a500" stroke-width="1"/>
+            <circle cx="204" cy="49" r="3" fill="#141c26" stroke="#f0a500" stroke-width="1"/>
+
+            <!-- ROPE FROM TROLLEY (animated length) -->
+            <g class="crane-rope">
+              <line x1="194" y1="60" x2="194" y2="130" stroke="#b8c4d4" stroke-width="1.5" class="cable-line"/>
+            </g>
+
+            <!-- HOOK (swings) -->
+            <g class="crane-hook" style="transform-origin:194px 60px">
+              <rect x="188" y="128" width="12" height="8" fill="#17202c" stroke="#f0a500" stroke-width="1"/>
+              <path d="M 194 136 Q 200 146 194 150 Q 188 146 194 136" stroke="#f0a500" stroke-width="2" fill="none"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- CABIN (operator cab on mast) -->
+        <rect x="80" y="190" width="50" height="32" fill="#17202c" stroke="#28334a" stroke-width="1"/>
+        <rect x="84" y="194" width="16" height="12" fill="#141c26" stroke="#f0a500" stroke-width="0.5" opacity="0.8"/>
+        <rect x="104" y="194" width="22" height="12" fill="#141c26" stroke="#28334a" stroke-width="0.5"/>
+        <!-- Cab window glow -->
+        <rect x="85" y="195" width="14" height="10" fill="#f0a500" opacity="0.08"/>
+
+        <!-- MEASUREMENT LINES -->
+        <line x1="40" y1="50" x2="40" y2="260" stroke="#f0a500" stroke-width="0.5" opacity="0.3" stroke-dasharray="3 3"/>
+        <line x1="36" y1="50" x2="44" y2="50" stroke="#f0a500" stroke-width="0.8" opacity="0.5"/>
+        <line x1="36" y1="260" x2="44" y2="260" stroke="#f0a500" stroke-width="0.8" opacity="0.5"/>
+        <text x="28" y="160" fill="#f0a500" font-size="9" font-family="monospace" opacity="0.5" transform="rotate(-90,28,160)">21m</text>
+
+        <!-- GEAR ASSEMBLY (bottom right) -->
+        <g transform="translate(310, 200)">
+          <!-- Gear A -->
+          <g class="gear-a" style="transform-origin:0px 0px">
+            <circle cx="0" cy="0" r="22" fill="none" stroke="#28334a" stroke-width="3"/>
+            <circle cx="0" cy="0" r="16" fill="#17202c" stroke="#1e2735" stroke-width="1"/>
+            <circle cx="0" cy="0" r="4" fill="#f0a500" opacity="0.6"/>
+            <!-- Teeth -->
+            <rect x="-3" y="-26" width="6" height="8" fill="#28334a" rx="1"/>
+            <rect x="-3" y="18" width="6" height="8" fill="#28334a" rx="1"/>
+            <rect x="18" y="-3" width="8" height="6" fill="#28334a" rx="1"/>
+            <rect x="-26" y="-3" width="8" height="6" fill="#28334a" rx="1"/>
+            <rect x="13" y="-20" width="6" height="8" fill="#28334a" rx="1" transform="rotate(45,16,-16)"/>
+            <rect x="-20" y="12" width="8" height="6" fill="#28334a" rx="1" transform="rotate(45,-17,15)"/>
+            <rect x="13" y="12" width="6" height="8" fill="#28334a" rx="1" transform="rotate(-45,16,16)"/>
+            <rect x="-20" y="-20" width="8" height="6" fill="#28334a" rx="1" transform="rotate(-45,-16,-16)"/>
+            <!-- Spokes -->
+            <line x1="-12" y1="0" x2="12" y2="0" stroke="#1e2735" stroke-width="1.5"/>
+            <line x1="0" y1="-12" x2="0" y2="12" stroke="#1e2735" stroke-width="1.5"/>
+          </g>
+
+          <!-- Gear B (smaller, meshes) -->
+          <g class="gear-b" style="transform-origin:40px 20px">
+            <circle cx="40" cy="20" r="14" fill="none" stroke="#28334a" stroke-width="2.5"/>
+            <circle cx="40" cy="20" r="10" fill="#17202c" stroke="#1e2735" stroke-width="1"/>
+            <circle cx="40" cy="20" r="3" fill="#f0a500" opacity="0.5"/>
+            <rect x="37" y="4" width="6" height="6" fill="#28334a" rx="1"/>
+            <rect x="37" y="30" width="6" height="6" fill="#28334a" rx="1"/>
+            <rect x="50" y="17" width="6" height="6" fill="#28334a" rx="1"/>
+            <rect x="24" y="17" width="6" height="6" fill="#28334a" rx="1"/>
+            <line x1="30" y1="20" x2="50" y2="20" stroke="#1e2735" stroke-width="1.5"/>
+            <line x1="40" y1="10" x2="40" y2="30" stroke="#1e2735" stroke-width="1.5"/>
+          </g>
+        </g>
+
+        <!-- HYDRAULIC PISTON (left side) -->
+        <g transform="translate(28, 100)">
+          <rect x="0" y="0" width="22" height="60" fill="#17202c" stroke="#1e2735" stroke-width="1" rx="2"/>
+          <g class="piston-rod">
+            <rect x="22" y="22" width="28" height="16" fill="#28334a" stroke="#f0a500" stroke-width="0.8" rx="1"/>
+            <circle cx="50" cy="30" r="5" fill="#141c26" stroke="#f0a500" stroke-width="1"/>
+          </g>
+          <text x="11" y="-6" fill="#f0a500" font-size="7" font-family="monospace" text-anchor="middle" opacity="0.6">HYD</text>
+          <line x1="0" y1="30" x2="-6" y2="30" stroke="#f0a500" stroke-width="0.8" opacity="0.4"/>
+          <line x1="0" y1="10" x2="-6" y2="10" stroke="#f0a500" stroke-width="0.8" opacity="0.3"/>
+          <line x1="0" y1="50" x2="-6" y2="50" stroke="#f0a500" stroke-width="0.8" opacity="0.3"/>
+        </g>
+
+        <!-- PRESSURE GAUGE -->
+        <g transform="translate(360, 80)">
+          <circle cx="22" cy="22" r="22" fill="#17202c" stroke="#28334a" stroke-width="1.5"/>
+          <circle cx="22" cy="22" r="16" fill="#141c26"/>
+          <!-- Scale marks -->
+          <line x1="22" y1="7" x2="22" y2="11" stroke="#28334a" stroke-width="1"/>
+          <line x1="35" y1="13" x2="32" y2="16" stroke="#28334a" stroke-width="1"/>
+          <line x1="37" y1="22" x2="33" y2="22" stroke="#28334a" stroke-width="1"/>
+          <line x1="9" y1="13" x2="12" y2="16" stroke="#28334a" stroke-width="1"/>
+          <line x1="7" y1="22" x2="11" y2="22" stroke="#28334a" stroke-width="1"/>
+          <!-- Needle -->
+          <g class="gauge-needle" style="transform-origin:22px 22px">
+            <line x1="22" y1="22" x2="22" y2="9" stroke="#f0a500" stroke-width="1.5" stroke-linecap="round" filter="url(#glow)"/>
+          </g>
+          <circle cx="22" cy="22" r="2.5" fill="#f0a500"/>
+          <text x="22" y="38" fill="#f0a500" font-size="6" font-family="monospace" text-anchor="middle" opacity="0.7">BAR</text>
+        </g>
+
+        <!-- DATA READOUT -->
+        <g transform="translate(290, 10)">
+          <rect x="0" y="0" width="120" height="55" fill="#0d1117" stroke="#1e2735" stroke-width="1" rx="2"/>
+          <rect x="0" y="0" width="120" height="14" fill="#17202c"/>
+          <text x="6" y="10" fill="#7a8899" font-size="7" font-family="monospace">// SYSTEM STATUS</text>
+          <text x="6" y="26" fill="#f0a500" font-size="8" font-family="monospace">LOAD: NOMINAL</text>
+          <text x="6" y="38" fill="#25d366" font-size="8" font-family="monospace">STATUS: OPERATIONAL</text>
+          <text x="6" y="50" fill="#7a8899" font-size="7" font-family="monospace">SINCE 2003</text>
+          <!-- Blinking cursor -->
+          <rect x="90" y="43" width="5" height="8" fill="#f0a500" opacity="0.8" style="animation:blink 1s step-end infinite"/>
+        </g>
+
+        <!-- Labels / annotations -->
+        <text x="115" y="30" fill="#7a8899" font-size="8" font-family="monospace" opacity="0.7">JIB ARM</text>
+        <text x="195" y="43" fill="#f0a500" font-size="8" font-family="monospace" opacity="0.8">TROLLEY</text>
+        <text x="115" y="240" fill="#7a8899" font-size="8" font-family="monospace" opacity="0.6">MAST</text>
+        <text x="268" y="218" fill="#7a8899" font-size="8" font-family="monospace" opacity="0.5">GEARBOX</text>
+      </svg>
+
+      <!-- Stats below crane -->
+      <div class="crane-stats">
+        <div class="cs"><div class="cs-num">22+</div><div class="cs-lbl">Years Experience</div></div>
+        <div class="cs"><div class="cs-num">ALL</div><div class="cs-lbl">Crane Types</div></div>
+        <div class="cs"><div class="cs-num">24/7</div><div class="cs-lbl">Breakdown Support</div></div>
+        <div class="cs"><div class="cs-num">6+</div><div class="cs-lbl">Major Clients</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER STRIP -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">Crane Repair & Overhaul</span>
+    <span class="ticker-item">Hydraulic Systems</span>
+    <span class="ticker-item">Precision Parts Fabrication</span>
+    <span class="ticker-item">Mechanical Fitting</span>
+    <span class="ticker-item">Breakdown Emergency Response</span>
+    <span class="ticker-item">Annual Maintenance Contracts</span>
+    <span class="ticker-item">EOT Cranes</span>
+    <span class="ticker-item">Tower Cranes</span>
+    <span class="ticker-item">Mobile Cranes</span>
+    <span class="ticker-item">Lathe & Milling</span>
+    <span class="ticker-item">Crane Repair & Overhaul</span>
+    <span class="ticker-item">Hydraulic Systems</span>
+    <span class="ticker-item">Precision Parts Fabrication</span>
+    <span class="ticker-item">Mechanical Fitting</span>
+    <span class="ticker-item">Breakdown Emergency Response</span>
+    <span class="ticker-item">Annual Maintenance Contracts</span>
+    <span class="ticker-item">EOT Cranes</span>
+    <span class="ticker-item">Tower Cranes</span>
+    <span class="ticker-item">Mobile Cranes</span>
+    <span class="ticker-item">Lathe & Milling</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">What We Do</div>
+      <div class="sec-title">Our Services</div>
+      <div class="sec-sub">Complete mechanical and crane engineering solutions — from on-site field repair to in-house precision machining.</div>
+    </div>
+    <div class="services-grid reveal">
+      <div class="svc">
+        <div class="svc-bar"></div>
+        <div class="svc-num">01</div>
+        <div class="svc-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="1.5">
+            <rect x="3" y="16" width="4" height="6"/><rect x="5" y="4" width="3" height="13"/>
+            <rect x="8" y="5" width="13" height="2.5"/><rect x="19" y="7.5" width="2" height="5"/>
+            <line x1="13" y1="7.5" x2="13" y2="14" stroke="#f0a500" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="svc-title">Crane Repair & Overhaul</div>
+        <div class="svc-desc">Full diagnosis and repair of EOT cranes, mobile cranes, tower cranes, and jib cranes. All mechanisms — hoisting, travel, slewing — restored to operational standard.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-bar"></div>
+        <div class="svc-num">02</div>
+        <div class="svc-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="1.5">
+            <circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/>
+            <line x1="12" y1="4" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="20"/>
+            <line x1="4" y1="12" x2="7" y2="12"/><line x1="17" y1="12" x2="20" y2="12"/>
+          </svg>
+        </div>
+        <div class="svc-title">Hydraulic System Services</div>
+        <div class="svc-desc">Cylinder reconditioning, pump overhaul, valve replacement, pressure testing, and seal replacement. Complete hydraulic crane maintenance by a trained specialist.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-bar"></div>
+        <div class="svc-num">03</div>
+        <div class="svc-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="1.5">
+            <path d="M12 2 L2 7 L12 12 L22 7 Z"/><path d="M2 17 L12 22 L22 17"/>
+            <path d="M2 12 L12 17 L22 12"/>
+          </svg>
+        </div>
+        <div class="svc-title">Precision Parts Fabrication</div>
+        <div class="svc-desc">Custom-machined replacement parts manufactured when OEM parts are unavailable. Lathe, milling, drilling, and grinding to exact tolerances using industry-grade machinery.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-bar"></div>
+        <div class="svc-num">04</div>
+        <div class="svc-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="1.5">
+            <circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/>
+            <line x1="12" y1="3" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="21"/>
+            <line x1="3" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="21" y2="12"/>
+          </svg>
+        </div>
+        <div class="svc-title">Mechanical Fitting & Assembly</div>
+        <div class="svc-desc">Expert fitting and re-assembly of gearboxes, drum assemblies, brake mechanisms, rope systems, and structural crane joints with precision fitting skills.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-bar"></div>
+        <div class="svc-num">05</div>
+        <div class="svc-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="1.5">
+            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+          </svg>
+        </div>
+        <div class="svc-title">Breakdown Emergency Response</div>
+        <div class="svc-desc">Rapid on-site response for unexpected crane failures. Fast diagnosis and parts replacement to minimize costly downtime at your facility or construction site.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-bar"></div>
+        <div class="svc-num">06</div>
+        <div class="svc-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="16" rx="1"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/>
+          </svg>
+        </div>
+        <div class="svc-title">Annual Maintenance Contracts</div>
+        <div class="svc-desc">Structured AMC plans covering scheduled inspections, lubrication, load testing, and full documentation. Ideal for factories, logistics hubs, and construction firms.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANICAL ANIMATION STRIP -->
+<section id="mechanical">
+  <div class="mech-full">
+    <svg class="mech-svg" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+
+      <!-- Background -->
+      <rect width="1200" height="320" fill="#0d1117"/>
+      <!-- Grid -->
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e2735" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="320" fill="url(#grid)"/>
+
+      <!-- LARGE GEAR 1 -->
+      <g class="g1" style="transform-origin:160px 160px">
+        <circle cx="160" cy="160" r="90" fill="none" stroke="#1e2735" stroke-width="6"/>
+        <circle cx="160" cy="160" r="75" fill="#0d1117" stroke="#17202c" stroke-width="2"/>
+        <circle cx="160" cy="160" r="18" fill="#141c26" stroke="#f0a500" stroke-width="1.5"/>
+        <!-- Spokes -->
+        <line x1="160" y1="85" x2="160" y2="235" stroke="#17202c" stroke-width="4"/>
+        <line x1="85" y1="160" x2="235" y2="160" stroke="#17202c" stroke-width="4"/>
+        <line x1="107" y1="107" x2="213" y2="213" stroke="#17202c" stroke-width="3"/>
+        <line x1="213" y1="107" x2="107" y2="213" stroke="#17202c" stroke-width="3"/>
+        <!-- Teeth -->
+        <rect x="154" y="65" width="12" height="22" fill="#1e2735" rx="2"/>
+        <rect x="154" y="233" width="12" height="22" fill="#1e2735" rx="2"/>
+        <rect x="65" y="154" width="22" height="12" fill="#1e2735" rx="2"/>
+        <rect x="233" y="154" width="22" height="12" fill="#1e2735" rx="2"/>
+        <rect x="96" y="83" width="12" height="22" fill="#1e2735" rx="2" transform="rotate(-45,102,94)"/>
+        <rect x="96" y="210" width="12" height="22" fill="#1e2735" rx="2" transform="rotate(45,102,221)"/>
+        <rect x="210" y="83" width="12" height="22" fill="#1e2735" rx="2" transform="rotate(45,216,94)"/>
+        <rect x="210" y="210" width="12" height="22" fill="#1e2735" rx="2" transform="rotate(-45,216,221)"/>
+        <!-- Gold accent ring -->
+        <circle cx="160" cy="160" r="90" fill="none" stroke="#f0a500" stroke-width="1" opacity="0.2"/>
+      </g>
+
+      <!-- MEDIUM GEAR 2 (meshes with large) -->
+      <g class="g2" style="transform-origin:310px 118px">
+        <circle cx="310" cy="118" r="56" fill="none" stroke="#1e2735" stroke-width="5"/>
+        <circle cx="310" cy="118" r="44" fill="#0d1117" stroke="#17202c" stroke-width="2"/>
+        <circle cx="310" cy="118" r="12" fill="#141c26" stroke="#f0a500" stroke-width="1.5"/>
+        <line x1="310" y1="62" x2="310" y2="174" stroke="#17202c" stroke-width="3"/>
+        <line x1="254" y1="118" x2="366" y2="118" stroke="#17202c" stroke-width="3"/>
+        <line x1="270" y1="78" x2="350" y2="158" stroke="#17202c" stroke-width="2"/>
+        <line x1="350" y1="78" x2="270" y2="158" stroke="#17202c" stroke-width="2"/>
+        <rect x="304" y="56" width="12" height="16" fill="#1e2735" rx="2"/>
+        <rect x="304" y="146" width="12" height="16" fill="#1e2735" rx="2"/>
+        <rect x="248" y="112" width="16" height="12" fill="#1e2735" rx="2"/>
+        <rect x="346" y="112" width="16" height="12" fill="#1e2735" rx="2"/>
+      </g>
+
+      <!-- SMALL GEAR 3 -->
+      <g class="g3" style="transform-origin:390px 220px">
+        <circle cx="390" cy="220" r="36" fill="none" stroke="#1e2735" stroke-width="4"/>
+        <circle cx="390" cy="220" r="27" fill="#0d1117" stroke="#17202c" stroke-width="1.5"/>
+        <circle cx="390" cy="220" r="8" fill="#141c26" stroke="#f0a500" stroke-width="1.5"/>
+        <line x1="390" y1="184" x2="390" y2="256" stroke="#17202c" stroke-width="2.5"/>
+        <line x1="354" y1="220" x2="426" y2="220" stroke="#17202c" stroke-width="2.5"/>
+        <rect x="384" y="178" width="12" height="12" fill="#1e2735" rx="1"/>
+        <rect x="384" y="230" width="12" height="12" fill="#1e2735" rx="1"/>
+        <rect x="348" y="214" width="12" height="12" fill="#1e2735" rx="1"/>
+        <rect x="430" y="214" width="12" height="12" fill="#1e2735" rx="1"/>
+      </g>
+
+      <!-- SHAFT LINE connecting gears -->
+      <line x1="310" y1="118" x2="310" y2="220" stroke="#28334a" stroke-width="3"/>
+      <line x1="310" y1="220" x2="390" y2="220" stroke="#28334a" stroke-width="3"/>
+
+      <!-- HYDRAULIC CYLINDER (center) -->
+      <g transform="translate(500,80)">
+        <rect x="0" y="0" width="40" height="160" fill="#141c26" stroke="#1e2735" stroke-width="2" rx="3"/>
+        <rect x="4" y="4" width="32" height="152" fill="#0d1117" rx="2"/>
+        <!-- Piston -->
+        <g class="piston-rod" style="transform-origin:20px 80px">
+          <rect x="40" y="68" width="100" height="24" fill="#17202c" stroke="#f0a500" stroke-width="1" rx="2"/>
+          <rect x="136" y="64" width="20" height="32" fill="#141c26" stroke="#28334a" stroke-width="1" rx="2"/>
+          <circle cx="156" cy="80" r="10" fill="#0d1117" stroke="#f0a500" stroke-width="1.5"/>
+          <circle cx="156" cy="80" r="4" fill="#f0a500" opacity="0.6"/>
+        </g>
+        <!-- Port connectors -->
+        <rect x="-8" y="30" width="8" height="6" fill="#28334a" stroke="#1e2735" stroke-width="1"/>
+        <rect x="-8" y="120" width="8" height="6" fill="#28334a" stroke="#1e2735" stroke-width="1"/>
+        <line x1="-14" y1="33" x2="-22" y2="33" stroke="#f0a500" stroke-width="1.5" class="cable-line"/>
+        <line x1="-14" y1="123" x2="-22" y2="123" stroke="#f0a500" stroke-width="1.5" class="cable-line"/>
+        <!-- Label -->
+        <text x="20" y="-10" fill="#7a8899" font-size="10" font-family="monospace" text-anchor="middle">HYD CYL</text>
+      </g>
+
+      <!-- PRESSURE GAUGE large -->
+      <g transform="translate(720, 80)">
+        <circle cx="70" cy="70" r="68" fill="#0d1117" stroke="#1e2735" stroke-width="3"/>
+        <circle cx="70" cy="70" r="58" fill="#0d1117" stroke="#17202c" stroke-width="1"/>
+        <circle cx="70" cy="70" r="50" fill="none" stroke="#141c26" stroke-width="1"/>
+        <!-- Scale arc -->
+        <path d="M 26 106 A 50 50 0 1 1 114 106" fill="none" stroke="#28334a" stroke-width="3"/>
+        <path d="M 26 106 A 50 50 0 0 1 96 32" fill="none" stroke="#f0a500" stroke-width="3" opacity="0.4"/>
+        <!-- Marks -->
+        <line x1="70" y1="22" x2="70" y2="32" stroke="#7a8899" stroke-width="2"/>
+        <line x1="108" y1="36" x2="102" y2="44" stroke="#7a8899" stroke-width="2"/>
+        <line x1="118" y1="70" x2="108" y2="70" stroke="#7a8899" stroke-width="2"/>
+        <line x1="32" y1="36" x2="38" y2="44" stroke="#7a8899" stroke-width="2"/>
+        <line x1="22" y1="70" x2="32" y2="70" stroke="#7a8899" stroke-width="2"/>
+        <!-- Needle -->
+        <g class="gauge-needle" style="transform-origin:70px 70px">
+          <line x1="70" y1="70" x2="70" y2="26" stroke="#c44b1e" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="70" y1="70" x2="70" y2="82" stroke="#c44b1e" stroke-width="2" opacity="0.4"/>
+        </g>
+        <circle cx="70" cy="70" r="7" fill="#141c26" stroke="#f0a500" stroke-width="2"/>
+        <circle cx="70" cy="70" r="3" fill="#f0a500"/>
+        <text x="70" y="100" fill="#7a8899" font-size="10" font-family="monospace" text-anchor="middle">PRESSURE</text>
+        <text x="70" y="115" fill="#f0a500" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">BAR</text>
+      </g>
+
+      <!-- LATHE MACHINE schematic -->
+      <g transform="translate(880, 100)">
+        <!-- Bed -->
+        <rect x="0" y="120" width="280" height="20" fill="#141c26" stroke="#1e2735" stroke-width="1.5"/>
+        <!-- Headstock -->
+        <rect x="0" y="60" width="60" height="60" fill="#17202c" stroke="#1e2735" stroke-width="1.5"/>
+        <!-- Spindle -->
+        <circle cx="30" cy="90" r="22" fill="#0d1117" stroke="#28334a" stroke-width="2"/>
+        <circle cx="30" cy="90" r="12" fill="#141c26" stroke="#f0a500" stroke-width="1" class="g1" style="transform-origin:30px 90px"/>
+        <circle cx="30" cy="90" r="5" fill="#f0a500" opacity="0.7"/>
+        <!-- Chuck jaws -->
+        <line x1="55" y1="78" x2="68" y2="78" stroke="#f0a500" stroke-width="3"/>
+        <line x1="55" y1="90" x2="68" y2="90" stroke="#f0a500" stroke-width="2" opacity="0.5"/>
+        <line x1="55" y1="102" x2="68" y2="102" stroke="#f0a500" stroke-width="3"/>
+        <!-- Tailstock -->
+        <rect x="220" y="80" width="40" height="40" fill="#17202c" stroke="#1e2735" stroke-width="1.5"/>
+        <circle cx="240" cy="100" r="8" fill="#0d1117" stroke="#28334a" stroke-width="1.5"/>
+        <!-- Workpiece -->
+        <rect x="68" y="84" width="152" height="12" fill="#28334a" stroke="#f0a500" stroke-width="0.5"/>
+        <!-- Carriage -->
+        <rect x="110" y="100" width="50" height="20" fill="#141c26" stroke="#1e2735" stroke-width="1"/>
+        <!-- Cutting tool -->
+        <polygon points="135,98 145,98 142,105" fill="#f0a500" opacity="0.8"/>
+        <!-- Ways -->
+        <line x1="0" y1="120" x2="280" y2="120" stroke="#f0a500" stroke-width="0.5" opacity="0.3"/>
+        <text x="140" y="155" fill="#7a8899" font-size="10" font-family="monospace" text-anchor="middle">LATHE MACHINE</text>
+      </g>
+
+      <!-- Label strip at bottom -->
+      <rect x="0" y="290" width="1200" height="30" fill="#0d1117"/>
+      <line x1="0" y1="290" x2="1200" y2="290" stroke="#f0a500" stroke-width="0.5" opacity="0.3"/>
+      <text x="20" y="310" fill="#7a8899" font-size="9" font-family="monospace">// SIDDIQUI ENGINEERING WORKS · MECHANICAL WORKSHOP SYSTEMS · MUMBAI</text>
+      <text x="1180" y="310" fill="#f0a500" font-size="9" font-family="monospace" text-anchor="end">EST. 2003</text>
+    </svg>
+    <div class="mech-label">// Workshop Systems · Mechanical Animation</div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">How We Work</div>
+      <div class="sec-title">Our Process</div>
+      <div class="sec-sub">From the first call to final handover — a clear, reliable process every time.</div>
+    </div>
+    <div class="process-steps reveal">
+      <div class="pstep">
+        <div class="pstep-num">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.12 10.82 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+        </div>
+        <div class="pstep-title">Initial Contact</div>
+        <div class="pstep-desc">Call or WhatsApp with your crane type, issue, and location. We respond immediately.</div>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <div class="pstep-title">Site Diagnosis</div>
+        <div class="pstep-desc">On-site inspection and full technical diagnosis of the failure — mechanical or hydraulic.</div>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <div class="pstep-title">Repair & Fabrication</div>
+        <div class="pstep-desc">Parts repaired or custom-fabricated in-house on our lathe, milling, and grinding machines.</div>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="pstep-title">Test & Handover</div>
+        <div class="pstep-desc">Full load testing and operational verification before sign-off. Warranty on workmanship.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">About Us</div>
+      <div class="sec-title">Built on Precision.<br><span style="color:var(--accent)">Proven in the Field.</span></div>
+      <div class="divider-line"></div>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-body">
+        <p><strong>Siddiqui Engineering Works</strong> is a Mumbai-based mechanical engineering firm specialising in the complete repair, fabrication, and maintenance of all types of mechanical and hydraulic cranes — from tower and overhead cranes to mobile, EOT and industrial hoisting systems.</p>
+        <p>The company was recently established to bring our work officially into the market — but our <strong>real experience goes back to 2003</strong>. For over 22 years, our founder has been delivering high-quality crane engineering services across Maharashtra.</p>
+        <p>Our strongest advantage is our <strong>complete in-house workshop capability</strong> — from manufacturing brand-new parts on lathe, milling and grinding machines to full hydraulic system diagnostics and overhaul. No outsourcing, no middlemen.</p>
+      </div>
+      <div class="about-card">
+        <div class="founder-tag">// Founder &amp; Lead Engineer</div>
+        <div class="founder-name">Nadeem Ahmad Siddiqui</div>
+        <div class="founder-role">Crane Engineer · Mechanical &amp; Hydraulic Systems Specialist</div>
+        <p class="founder-bio">Nadeem has been working in crane and mechanical engineering since <strong style="color:var(--white)">2003</strong> — over 22 years of hands-on field and workshop experience. He has mastered every major crane type and machining discipline, working with leading crane companies and infrastructure contractors across India.</p>
+        <p class="founder-bio">His ability to design and manufacture new parts from raw materials — combined with deep expertise in hydraulic systems — makes him one of the most complete crane engineers in the region.</p>
+        <div class="tag-cloud">
+          <span class="tag">Lathe</span><span class="tag">Milling</span><span class="tag">Shaping</span>
+          <span class="tag">Grinding</span><span class="tag">Drilling</span><span class="tag">Hydraulics</span>
+          <span class="tag">All Crane Types</span><span class="tag">Field Service</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background:var(--steel)">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">Workshop Capabilities</div>
+      <div class="sec-title">Machining Skills</div>
+      <div class="sec-sub">Hands-on expertise across all major machining operations — every part made in-house to exact specification.</div>
+    </div>
+    <div class="skills-layout">
+      <div class="reveal">
+        <div class="skills-pills">
+          <div class="pill"><span class="pill-dot"></span>Lathe Operations</div>
+          <div class="pill"><span class="pill-dot"></span>Milling</div>
+          <div class="pill"><span class="pill-dot"></span>Shaping</div>
+          <div class="pill"><span class="pill-dot"></span>Grinding</div>
+          <div class="pill"><span class="pill-dot"></span>Drilling</div>
+          <div class="pill"><span class="pill-dot"></span>Metal Cutting</div>
+          <div class="pill"><span class="pill-dot"></span>Mechanical Fitting</div>
+          <div class="pill"><span class="pill-dot"></span>Hydraulic Systems</div>
+          <div class="pill"><span class="pill-dot"></span>All Crane Types</div>
+          <div class="pill"><span class="pill-dot"></span>Hydraulic Cranes</div>
+          <div class="pill"><span class="pill-dot"></span>Mechanical Cranes</div>
+          <div class="pill"><span class="pill-dot"></span>Parts Manufacturing</div>
+          <div class="pill"><span class="pill-dot"></span>Breakdown Diagnosis</div>
+          <div class="pill"><span class="pill-dot"></span>AMC Servicing</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="exp-block">
+          <div class="exp-label">Crane Repair &amp; Maintenance<span class="exp-pct">95%</span></div>
+          <div class="exp-bar-wrap"><div class="exp-bar" data-width="95" style="width:0%"></div></div>
+          <div class="exp-name">Expert Level</div>
+        </div>
+        <div class="exp-block">
+          <div class="exp-label">Hydraulic Systems<span class="exp-pct">90%</span></div>
+          <div class="exp-bar-wrap"><div class="exp-bar" data-width="90" style="width:0%"></div></div>
+          <div class="exp-name">Expert Level</div>
+        </div>
+        <div class="exp-block">
+          <div class="exp-label">Precision Machining<span class="exp-pct">88%</span></div>
+          <div class="exp-bar-wrap"><div class="exp-bar" data-width="88" style="width:0%"></div></div>
+          <div class="exp-name">Advanced Level</div>
+        </div>
+        <div class="exp-block">
+          <div class="exp-label">Parts Fabrication<span class="exp-pct">85%</span></div>
+          <div class="exp-bar-wrap"><div class="exp-bar" data-width="85" style="width:0%"></div></div>
+          <div class="exp-name">Advanced Level</div>
+        </div>
+        <div class="exp-block">
+          <div class="exp-label">On-Site Field Work<span class="exp-pct">92%</span></div>
+          <div class="exp-bar-wrap"><div class="exp-bar" data-width="92" style="width:0%"></div></div>
+          <div class="exp-name">Expert Level</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="background:var(--black)">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">Our Work</div>
+      <div class="sec-title">Project Gallery</div>
+      <div class="sec-sub">Field and workshop documentation. Add your project photos here — each slot is ready to go.</div>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item wide tall">
+        <div class="gallery-placeholder"><div class="ph-icon">🏗</div><div class="ph-text">Crane Overhaul</div><div class="ph-hint">Add Photo</div></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><div class="ph-icon">💧</div><div class="ph-text">Hydraulic Work</div><div class="ph-hint">Add Photo</div></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><div class="ph-icon">⚙</div><div class="ph-text">Workshop</div><div class="ph-hint">Add Photo</div></div>
+      </div>
+      <div class="gallery-item wide">
+        <div class="gallery-placeholder"><div class="ph-icon">🔩</div><div class="ph-text">Parts Fabrication</div><div class="ph-hint">Add Photo</div></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><div class="ph-icon">🏭</div><div class="ph-text">Field Service</div><div class="ph-hint">Add Photo</div></div>
+      </div>
+    </div>
+    <div style="margin-top:24px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);text-align:center">Photos will be added as projects are documented — contact us for references</div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+
+<section id="clients">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">Industry Trust</div>
+      <div class="sec-title">Companies We've Served</div>
+      <div class="sec-sub">Years of contract and project-based work with leading crane service companies across Mumbai.</div>
+    </div>
+    <div class="clients-grid reveal">
+      <div class="client-tile"><div class="client-dot"></div><div><div class="client-name">Express Crane Service</div><div class="client-sub">Mumbai</div></div></div>
+      <div class="client-tile"><div class="client-dot"></div><div><div class="client-name">Express Cranes</div><div class="client-sub">Mumbai</div></div></div>
+      <div class="client-tile"><div class="client-dot"></div><div><div class="client-name">Jyotsna Crane Service</div><div class="client-sub">Mumbai Region</div></div></div>
+      <div class="client-tile"><div class="client-dot"></div><div><div class="client-name">Jyotsna Enterprises</div><div class="client-sub">Mumbai Region</div></div></div>
+      <div class="client-tile"><div class="client-dot"></div><div><div class="client-name">Pyara Singh &amp; Sons</div><div class="client-sub">Mumbai</div></div></div>
+      <div class="client-tile"><div class="client-dot"></div><div><div class="client-name">+ Several More</div><div class="client-sub">References on Request</div></div></div>
+    </div>
+    <div class="trust-strip reveal">
+      <div class="trust-item"><div class="trust-num">22+</div><div class="trust-lbl">Years Experience</div></div>
+      <div class="trust-item"><div class="trust-num">ALL</div><div class="trust-lbl">Crane Types</div></div>
+      <div class="trust-item"><div class="trust-num">100%</div><div class="trust-lbl">In-House Work</div></div>
+      <div class="trust-item"><div class="trust-num">24/7</div><div class="trust-lbl">Breakdown Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--steel)">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">Get In Touch</div>
+      <div class="sec-title">Request a Quote</div>
+      <div class="sec-sub">Available for new contracts, AMC agreements, project-based repair work, and emergency callouts across Mumbai and Maharashtra.</div>
+    </div>
+    <div class="contact-wrap reveal">
+      <div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon-box">👤</div>
+          <div>
+            <div class="cinfo-label">Contact Person</div>
+            <div class="cinfo-value">Nadeem Ahmad Siddiqui<br><span style="font-size:13px;color:var(--muted)">Crane &amp; Mechanical Engineer</span></div>
+          </div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon-box">📞</div>
+          <div>
+            <div class="cinfo-label">Phone / WhatsApp</div>
+            <div class="cinfo-value"><a href="tel:+919594957385">+91 95949 57385</a></div>
+          </div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon-box">✉</div>
+          <div>
+            <div class="cinfo-label">Email</div>
+            <div class="cinfo-value"><a href="mailto:nadeemahmed733@gmail.com">nadeemahmed733@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon-box">📍</div>
+          <div>
+            <div class="cinfo-label">Location</div>
+            <div class="cinfo-value">Mumbai, Maharashtra, India</div>
+          </div>
+        </div>
+        <a class="wa-btn" href="https://wa.me/919594957385?text=Hello%20Nadeem%20bhai%2C%20I%20found%20Siddiqui%20Engineering%20Works%20and%20would%20like%20to%20discuss%20crane%20services." target="_blank">
+          💬&nbsp; Chat on WhatsApp
+        </a>
+      </div>
+      <div class="contact-form">
+        <div class="form-title">Send an Inquiry</div>
+        <div class="form-sub">Fill in your details — we'll respond within 24 hours via WhatsApp or phone.</div>
+        <div class="form-row">
+          <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full Name" id="fname"></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX" id="fphone"></div>
+        </div>
+        <div class="form-group"><label>Company / Organization</label><input type="text" placeholder="Your Company Name" id="fcompany"></div>
+        <div class="form-group">
+          <label>Service Required</label>
+          <select id="fservice">
+            <option value="">Select a service...</option>
+            <option>Crane Repair &amp; Overhaul</option>
+            <option>Hydraulic System Services</option>
+            <option>Precision Parts Fabrication</option>
+            <option>Mechanical Fitting &amp; Assembly</option>
+            <option>Breakdown Emergency Response</option>
+            <option>Annual Maintenance Contract (AMC)</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Describe Your Requirement</label><textarea placeholder="Tell us about your crane type, issue, or project requirement..." id="fmsg"></textarea></div>
+        <button class="form-submit" onclick="submitForm()">⚙ Send Inquiry</button>
+        <div class="form-msg" id="formMsg">✅ Inquiry received. We'll contact you within 24 hours on WhatsApp or phone.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div>
+      <div class="f-brand">Siddiqui <span>Engineering</span> Works</div>
+      <div class="f-about">Crane and mechanical engineering specialists based in Mumbai. Workshop and field service for all crane types across Maharashtra. Est. 2003.</div>
+    </div>
+    <div>
+      <div class="f-col-title">Services</div>
+      <ul class="f-links">
+        <li><a href="#services">Crane Repair &amp; Overhaul</a></li>
+        <li><a href="#services">Hydraulic Systems</a></li>
+        <li><a href="#services">Parts Fabrication</a></li>
+        <li><a href="#services">Mechanical Fitting</a></li>
+        <li><a href="#services">AMC Contracts</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title">Contact</div>
+      <ul class="f-links">
+        <li><a href="tel:+919594957385">+91 95949 57385</a></li>
+        <li><a href="mailto:nadeemahmed733@gmail.com">nadeemahmed733@gmail.com</a></li>
+        <li><a href="https://wa.me/919594957385">WhatsApp Us</a></li>
+        <li>Mumbai, Maharashtra, India</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Siddiqui Engineering Works — Mumbai, Maharashtra, India</p>
+    <p>Crane &amp; Mechanical Engineering Specialists</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <div class="wa-tooltip">Chat on WhatsApp</div>
+  <a class="wa-float-btn" href="https://wa.me/919594957385?text=Hello%20Nadeem%20bhai%2C%20I%20found%20Siddiqui%20Engineering%20Works%20and%20want%20to%20inquire%20about%20crane%20services." target="_blank" aria-label="WhatsApp">💬</a>
+</div>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('.exp-bar[data-width]').forEach(bar=>{
+        setTimeout(()=>{bar.style.width=bar.dataset.width+'%'},200);
+      });
+    }
+  });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Active nav
+window.addEventListener('scroll',()=>{
+  const ids=['home','services','process','about','skills','clients','contact'];
+  const links=document.querySelectorAll('.nav-links a');
+  let current='';
+  ids.forEach(id=>{
+    const s=document.getElementById(id);
+    if(s&&window.scrollY>=s.offsetTop-100) current=id;
+  });
+  links.forEach(a=>{
+    a.style.color=a.getAttribute('href')==='#'+current?'var(--accent)':'';
+  });
+});
+
+// Form submit → WhatsApp
+function submitForm(){
+  const name=document.getElementById('fname').value.trim();
+  const phone=document.getElementById('fphone').value.trim();
+  if(!name||!phone){alert('Please enter your name and phone number.');return;}
+  const waText=encodeURIComponent(
+    `Hello Nadeem bhai,\n\nNew inquiry from your website:\n\nName: ${name}\nPhone: ${phone}\nCompany: ${document.getElementById('fcompany').value}\nService: ${document.getElementById('fservice').value||'Not specified'}\n\nMessage: ${document.getElementById('fmsg').value}`
+  );
+  const msg=document.getElementById('formMsg');
+  msg.style.display='block';msg.className='form-msg success';
+  setTimeout(()=>window.open(`https://wa.me/919594957385?text=${waText}`,'_blank'),800);
+}
+</script>
+</body>
+</html>
